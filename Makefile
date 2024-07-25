@@ -6,47 +6,43 @@
 #    By: otuyishi <otuyishi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/22 11:04:08 by otuyishi          #+#    #+#              #
-#    Updated: 2023/04/20 12:49:17 by otuyishi         ###   ########.fr        #
+#    Updated: 2024/07/25 09:55:48 by otuyishi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CC = cc
-
 CFLAGS = -Wall -Wextra -Werror
 
-SOURCE = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
- ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c \
- ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
- ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 
-BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
- ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+SRCDIR = srcs
+INCDIR = includes
+OBJDIR = obj
 
-OBJ = $(SOURCE:.c=.o)
-
-BONUS_OBJ = $(BONUS_SRC:.c=.o)
+# Collect all .c files in SRCDIR and its subdirectories
+SRCS = $(shell find $(SRCDIR) -name '*.c')
+# Convert .c file paths to .o file paths
+OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+$(NAME): $(OBJS)
+	@echo "Creating archive $@ with objects: $^"
+	ar rcs $(NAME) $(OBJS)
 
-$(OBJ): $(SRC)
-	$(CC) $(CFLAGS) -c $(SOURCE)
-
-bonus: $(BONUS_OBJ)
-	ar rcs $(NAME) $(BONUS_OBJ)
-
-$(BONUS_OBJ): $(BONUS_SRC)
-	$(CC) $(CFLAGS) -c $(BONUS_SRC)
+# Rule to compile .c files into .o files
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	@mkdir -p $(OBJDIR)/$(*D)  # Create directory structure for object files
+	@echo "Compiling $< to $@"
+	$(CC) $(CFLAGS) -I $(INCDIR) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(BONUS_OBJ)
+	rm -f $(OBJS)
+	rm -rf $(OBJDIR)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
