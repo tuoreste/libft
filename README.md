@@ -29,8 +29,8 @@ The `libft` library provides implementations of various C standard library funct
 
 ### String Manipulation
 
-- **`ft_strlen`**: Computes the length of a string. [Source](srcs/ft_strlen.c)
-- **`ft_memset`**: Fills a block of memory with a specific value. [Source](srcs/ft_memset.c)
+- [ft_strlen](srcs/strManipulation/ft_strlen.c): Computes the length of a string.
+- [ft_memset](srcs/strManipulation/ft_memset.c) Fills a block of memory with a specific value.
 - **`ft_bzero`**: Sets a block of memory to zero. [Source](srcs/ft_bzero.c)
 - **`ft_memcpy`**: Copies a block of memory from one location to another. [Source](srcs/ft_memcpy.c)
 - **`ft_memmove`**: Moves a block of memory from one location to another, handling overlap. [Source](srcs/ft_memmove.c)
