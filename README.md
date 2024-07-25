@@ -21,7 +21,7 @@ The `libft` library provides implementations of various C standard library funct
 
 ### Character Checks
 
-- **`[ft_isalpha](srcs/charChecksAndConvert/ft_isalpha.c)`**: Checks if a character is an alphabetic letter. [Source](srcs/charChecksAndConvert/ft_isalpha.c)
+- [ft_isalpha](srcs/charChecksAndConvert/ft_isalpha.c): Checks if a character is an alphabetic letter. [Source](srcs/charChecksAndConvert/ft_isalpha.c)
 - **`[ft_isdigit](srcs/charChecksAndConvert/ft_isdigit.c)`**: Checks if a character is a digit. [Source](srcs/charChecksAndConvert/ft_isdigit.c)
 - **`[ft_isalnum](srcs/charChecksAndConvert/ft_isalnum.c)`**: Checks if a character is alphanumeric. [Source](srcs/charChecksAndConvert/ft_isalnum.c)
 - **`[ft_isascii](srcs/charChecksAndConvert/ft_isascii.c)`**: Checks if a character is an ASCII character. [Source](srcs/charChecksAndConvert/ft_isascii.c)
