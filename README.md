@@ -105,3 +105,7 @@ To remove all generated files and rebuild the library, run:
 ```sh
 make && make fclean
 ```
+
+## License
+
+- [License](/License)
