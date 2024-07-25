@@ -6,10 +6,12 @@
 
 - [Overview](#overview)
 - [Functions](#functions)
-  - [Character Checks](#character-checks)
-  - [String Manipulation](#string-manipulation)
-  - [Memory Management](#memory-management)
-  - [Linked Lists](#linked-lists)
+  - [Character Checks](#Character-Checks-and-Converts)
+  - [Conversion](#Convert)
+  - [Input and Output](#Input-and-Output)
+  - [Linked Lists Operations](#Linked-Lists-Operations)
+  - [Memory Management](#Memory-Management)
+  - [String Manipulation](#String-Manipulation)
 - [Usage](#usage)
 - [License](#license)
 
