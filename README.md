@@ -21,11 +21,11 @@ The `libft` library provides implementations of various C standard library funct
 
 ### Character Checks
 
-- **`ft_isalpha`**: Checks if a character is an alphabetic letter. [Source](srcs/ft_isalpha.c)
-- **`ft_isdigit`**: Checks if a character is a digit. [Source](srcs/ft_isdigit.c)
-- **`ft_isalnum`**: Checks if a character is alphanumeric. [Source](srcs/ft_isalnum.c)
-- **`ft_isascii`**: Checks if a character is an ASCII character. [Source](srcs/ft_isascii.c)
-- **`ft_isprint`**: Checks if a character is printable. [Source](srcs/ft_isprint.c)
+- **`[ft_isalpha](srcs/charChecksAndConvert/ft_isalpha.c)`**: Checks if a character is an alphabetic letter. [Source](srcs/charChecksAndConvert/ft_isalpha.c)
+- **`[ft_isdigit](srcs/charChecksAndConvert/ft_isdigit.c)`**: Checks if a character is a digit. [Source](srcs/charChecksAndConvert/ft_isdigit.c)
+- **`[ft_isalnum](srcs/charChecksAndConvert/ft_isalnum.c)`**: Checks if a character is alphanumeric. [Source](srcs/charChecksAndConvert/ft_isalnum.c)
+- **`[ft_isascii](srcs/charChecksAndConvert/ft_isascii.c)`**: Checks if a character is an ASCII character. [Source](srcs/charChecksAndConvert/ft_isascii.c)
+- **`[ft_isprint](srcs/charChecksAndConvert/ft_isprint.c)`**: Checks if a character is printable. [Source](srcs/charChecksAndConvert/ft_isprint.c)
 
 ### String Manipulation
 
