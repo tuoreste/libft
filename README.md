@@ -1,4 +1,4 @@
-# libft
+# Libft
 
 `libft` is a library of basic functions used in C programming. It includes implementations of standard library functions and additional utility functions. This library is designed to provide functionality similar to the C standard library but with custom implementations for educational purposes or specific needs.
 
